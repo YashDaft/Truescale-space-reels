@@ -20,7 +20,7 @@ The renderer doesn't decide anything about content. It receives two JSON files a
 }
 ```
 
-`facts` holds raw values for drawing (sizes, distances, speeds). `display` holds the exact text for numbers in the reel's lines of text, so the wording of a number is decided once, in the fact sheet. Moving numbers inside a scene, like a counter running up or an orbit's lap count, are worked out by code from `facts` while they animate.
+`facts` holds raw values for drawing (sizes, distances, speeds). `display` holds the exact text for numbers in the reel's lines of text, so the wording of a number is decided once, in the fact sheet. Fact sheets are built and checked by the Python package in `factsheet/` at the top of the repo. Moving numbers inside a scene, like a counter running up or an orbit's lap count, are worked out by code from `facts` while they animate.
 
 **Storyboard**: the style, the music, and the scenes in order. Each scene has its parameters, its lines of text (beats), and its sound effects, all timed in seconds from the start of the scene.
 
@@ -62,7 +62,7 @@ src/
   styles/             how text looks and moves, plus overlays: cinematic, flat, line
   Planets.tsx         3D Earth and Sun
   loadFonts.ts        fonts, loaded before the first frame
-examples/             example fact sheet and one storyboard per style
+examples/             example fact sheet (built by make_example_fact_sheet.py) and one storyboard per style
 scripts/make_assets.py  makes the sound effects and the Sun texture with code
 ```
 

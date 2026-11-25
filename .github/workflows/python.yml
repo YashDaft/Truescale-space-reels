@@ -1,0 +1,43 @@
+name: Python
+
+on:
+  push:
+    paths:
+      - "factsheet/**"
+      - "tests/**"
+      - "renderer/examples/**"
+      - "pyproject.toml"
+      - "uv.lock"
+      - ".python-version"
+      - ".github/workflows/python.yml"
+  pull_request:
+    paths:
+      - "factsheet/**"
+      - "tests/**"
+      - "renderer/examples/**"
+      - "pyproject.toml"
+      - "uv.lock"
+      - ".python-version"
+      - ".github/workflows/python.yml"
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version-file: .python-version
+
+      - name: Install uv
+        run: pip install uv==0.11.32
+
+      # --locked fails if uv.lock is out of date with pyproject.toml
+      - name: Install
+        run: uv sync --locked
+
+      - name: Run the tests
+        run: uv run pytest

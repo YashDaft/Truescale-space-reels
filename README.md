@@ -11,12 +11,24 @@ Work in progress.
 | Part | Status |
 |---|---|
 | `renderer/`: storyboard + fact sheet → video (Remotion, Three.js), with validation | Done |
-| Fact sheet builder and schema (Python) | Next |
-| MCP servers for each data source | Planned |
+| `factsheet/`: fact sheet schema and builder (Python, Pydantic), with tests | Done |
+| MCP server for NASA's planetary fact sheets | Next |
+| MCP servers for the other data sources | Planned |
 | LangGraph pipeline: research → fact sheet → text → storyboard → verify → render → review | Planned |
 | Langfuse tracing and an evaluation of how many planted errors the checks catch | Planned |
 
 Design decisions and the reasons for them are in [docs/decisions.md](docs/decisions.md).
+
+## Running the Python tests
+
+You need [uv](https://docs.astral.sh/uv/).
+
+```bash
+uv sync
+uv run pytest
+```
+
+How to run the renderer is in [renderer/README.md](renderer/README.md).
 
 ## License
 

@@ -55,3 +55,19 @@ Each entry: what was decided, what else was considered, and why.
 **Considered:** LangSmith, already used in an earlier project.
 
 **Why:** It's open source and can run locally in Docker, it isn't tied to one framework (it builds on OpenTelemetry), and it covers tracing, cost per reel, datasets and experiments.
+
+## 9. On-screen number text is made by code
+
+**Decided:** A fact sheet's `display` text (such as "1,321" or "8 minutes 19 seconds") is made by `factsheet/display.py` from a fact's value. Whoever builds the sheet only picks a format: number, count, percent, or minutes and seconds, with decimals, a scale word like "million" and a unit.
+
+**Considered:** Letting the builder type the display text, as the first example script did.
+
+**Why:** Typed display text would be the one place a model could still type a number, and a wrong "1,231" would pass every other check. Counts round down, so "4 laps" means four finished laps, the same way the orbit scene counts them.
+
+## 10. Formulas can't contain typed numbers
+
+**Decided:** A worked-out fact's formula may only use `+ - * /`, brackets and names of facts listed before it. When a fact sheet is loaded, every formula is worked out again and must give the stored value.
+
+**Considered:** Allowing constants such as `* 100` or `/ 1000` for unit changes.
+
+**Why:** A constant is a typed number. Percentages and "million" are handled by the display formats instead. If a real conversion is needed later, it can be added as a fact with its own source. Working formulas out again on load catches a value changed by hand after it was calculated.
