@@ -54,4 +54,4 @@ Each entry: what was decided, what else was considered, and why.
 
 **Considered:** LangSmith, already used in an earlier project.
 
-**Why:** It's open source and can run locally in Docker, it isn't tied to one framework (it builds on OpenTelemetry), and it covers tracing, cost per reel, datasets and experiments. Using it here also adds a second tool to the portfolio.
+**Why:** It's open source and can run locally in Docker, it isn't tied to one framework (it builds on OpenTelemetry), and it covers tracing, cost per reel, datasets and experiments.
