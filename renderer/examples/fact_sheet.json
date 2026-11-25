@@ -1,0 +1,83 @@
+{
+  "facts": {
+    "earth_sun_km": {
+      "value": 149598000.0,
+      "source": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html",
+      "level": "measured data"
+    },
+    "speed_of_light_km_s": {
+      "value": 299792.458,
+      "source": "https://physics.nist.gov/cgi-bin/cuu/Value?c",
+      "level": "measured data"
+    },
+    "jupiter_volume_ratio": {
+      "value": 1321.33,
+      "source": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/jupiterfact.html",
+      "level": "measured data"
+    },
+    "jupiter_radius_ratio": {
+      "value": 10.973,
+      "source": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/jupiterfact.html",
+      "level": "measured data"
+    },
+    "mercury_period_days": {
+      "value": 88.0,
+      "source": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/index.html",
+      "level": "measured data"
+    },
+    "mercury_distance_mkm": {
+      "value": 57.9,
+      "source": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/index.html",
+      "level": "measured data"
+    },
+    "venus_period_days": {
+      "value": 224.7,
+      "source": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/index.html",
+      "level": "measured data"
+    },
+    "venus_distance_mkm": {
+      "value": 108.2,
+      "source": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/index.html",
+      "level": "measured data"
+    },
+    "earth_period_days": {
+      "value": 365.2,
+      "source": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/index.html",
+      "level": "measured data"
+    },
+    "earth_distance_mkm": {
+      "value": 149.6,
+      "source": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/index.html",
+      "level": "measured data"
+    },
+    "mars_period_days": {
+      "value": 687.0,
+      "source": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/index.html",
+      "level": "measured data"
+    },
+    "mars_distance_mkm": {
+      "value": 228.0,
+      "source": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/index.html",
+      "level": "measured data"
+    },
+    "light_seconds": {
+      "value": 499.0052151345315,
+      "formula": "earth_sun_km / speed_of_light_km_s"
+    },
+    "mercury_laps": {
+      "value": 4.1499999999999995,
+      "formula": "earth_period_days / mercury_period_days"
+    },
+    "mars_share": {
+      "value": 0.5315866084425036,
+      "formula": "earth_period_days / mars_period_days"
+    }
+  },
+  "display": {
+    "light_time": "8 minutes 19 seconds",
+    "earth_sun_mkm": "149.6 million km",
+    "jupiter_volume_ratio": "1,321",
+    "mercury_laps": "4 laps",
+    "mars_share": "53%"
+  }
+}

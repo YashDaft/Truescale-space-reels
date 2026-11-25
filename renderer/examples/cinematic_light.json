@@ -1,0 +1,22 @@
+{
+  "title": "Sunlight takes about 8 minutes to reach you",
+  "style": "cinematic",
+  "music": "cine_drone.wav",
+  "music_volume": 0.55,
+  "scenes": [
+    {
+      "scene": "light_journey",
+      "seconds": 11,
+      "beats": [
+        {"at": 0.8, "until": 3.6, "text": "The sunlight on your skin"},
+        {"at": 4.0, "until": 7.0, "text": "left the Sun about {light_time} ago"},
+        {"at": 7.4, "until": 11.0, "text": "and crossed {earth_sun_mkm} to get here"}
+      ],
+      "sounds": [
+        {"at": 0.0, "file": "boom.wav", "volume": 0.6},
+        {"at": 2.6, "file": "cine_swell.wav", "volume": 0.7},
+        {"at": 8.6, "file": "cine_shimmer.wav", "volume": 0.5}
+      ]
+    }
+  ]
+}

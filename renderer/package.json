@@ -1,0 +1,26 @@
+{
+  "name": "truescale-renderer",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Turns a Truescale storyboard and fact sheet into a video",
+  "scripts": {
+    "studio": "remotion studio",
+    "typecheck": "tsc -p .",
+    "render": "remotion render src/index.ts Reel",
+    "still": "remotion still src/index.ts Reel"
+  },
+  "dependencies": {
+    "@react-three/fiber": "9.4.0",
+    "@remotion/cli": "4.0.546",
+    "@remotion/three": "4.0.546",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "remotion": "4.0.546",
+    "three": "0.180.0"
+  },
+  "devDependencies": {
+    "@types/react": "19.2.2",
+    "@types/three": "0.180.0",
+    "typescript": "5.9.3"
+  }
+}

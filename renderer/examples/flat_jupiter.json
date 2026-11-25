@@ -1,0 +1,28 @@
+{
+  "title": "How many Earths fit inside Jupiter?",
+  "style": "flat",
+  "music": "flat_loop.wav",
+  "music_volume": 0.3,
+  "scenes": [
+    {
+      "scene": "volume_fill",
+      "seconds": 10,
+      "params": {
+        "radius_ratio_fact": "jupiter_radius_ratio",
+        "count_fact": "jupiter_volume_ratio"
+      },
+      "beats": [
+        {"at": 0.2, "until": 1.7, "text": "This is Earth"},
+        {"at": 1.9, "until": 3.3, "text": "This is Jupiter"},
+        {"at": 3.5, "until": 7.5, "text": "How many Earths fit inside?"},
+        {"at": 7.7, "until": 10.0, "text": "{jupiter_volume_ratio} Earths!", "subtext": "By volume. Source: NASA Jupiter fact sheet"}
+      ],
+      "sounds": [
+        {"at": 0.1, "file": "pop.wav"},
+        {"at": 1.6, "file": "whoosh.wav", "volume": 0.6},
+        {"at": 3.4, "file": "tick_run.wav", "volume": 0.7},
+        {"at": 7.6, "file": "chime.wav", "volume": 0.8}
+      ]
+    }
+  ]
+}

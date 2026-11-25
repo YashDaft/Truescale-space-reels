@@ -1,0 +1,24 @@
+{
+  "title": "One Earth year for the inner planets",
+  "style": "line",
+  "music": "line_drone.wav",
+  "music_volume": 0.25,
+  "scenes": [
+    {
+      "scene": "orbit_clock",
+      "seconds": 11,
+      "params": {
+        "planets": ["mercury", "venus", "earth", "mars"],
+        "highlight": "mercury",
+        "footnote": "Distances and speeds to scale. Orbits drawn as circles. Source: NASA planetary fact sheet."
+      },
+      "beats": [
+        {"at": 0.3, "until": 8.6, "text": "One Earth year, seen from above the Sun"},
+        {"at": 8.8, "until": 11.0, "text": "Mercury: {mercury_laps}", "subtext": "Mars: only {mars_share} of one lap"}
+      ],
+      "sounds": [
+        {"at": 9.5, "file": "ping.wav", "volume": 0.6}
+      ]
+    }
+  ]
+}
