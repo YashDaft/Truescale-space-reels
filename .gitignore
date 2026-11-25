@@ -1,0 +1,22 @@
+# Secrets
+.env
+
+# Node
+node_modules/
+renderer/build/
+
+# Rendered videos and stills
+out/
+renderer/out/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+
+# Editors and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
