@@ -2,6 +2,7 @@
   "name": "truescale-renderer",
   "version": "0.1.0",
   "private": true,
+  "license": "UNLICENSED",
   "description": "Turns a Truescale storyboard and fact sheet into a video",
   "scripts": {
     "studio": "remotion studio",

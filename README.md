@@ -20,4 +20,6 @@ Design decisions and the reasons for them are in [docs/decisions.md](docs/decisi
 
 ## License
 
-Apache 2.0. See [LICENSE](LICENSE).
+Copyright (c) 2026 Yash Daftari. All rights reserved.
+
+The code is public to read, but it isn't licensed for reuse. Please ask if you'd like to use any of it.
