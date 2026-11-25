@@ -1,0 +1,84 @@
+{
+  "styles": {
+    "cinematic": {
+      "description": "Dark, realistic 3D space with slow camera moves, film grain and large serif text. For awe and scale. Pictures here are not to scale; numbers live in the text.",
+      "music": ["cine_drone.wav"]
+    },
+    "flat": {
+      "description": "Bright flat illustration with bouncy motion and rounded bold text. For playful comparisons.",
+      "music": ["flat_loop.wav"]
+    },
+    "line": {
+      "description": "Thin lines and dots on black, precise and calm, with light left-aligned text. For orbits, paths and measurements drawn to scale.",
+      "music": ["line_drone.wav"]
+    }
+  },
+  "sounds": [
+    "boom.wav",
+    "chime.wav",
+    "cine_shimmer.wav",
+    "cine_swell.wav",
+    "click.wav",
+    "ping.wav",
+    "pop.wav",
+    "tick_run.wav",
+    "whoosh.wav"
+  ],
+  "scenes": {
+    "light_journey": {
+      "style": "cinematic",
+      "description": "The camera starts at the Sun's surface and flies back with the sunlight past streaking stars until Earth appears as a crescent. Not to scale.",
+      "min_seconds": 9,
+      "max_seconds": 14,
+      "requires_facts": [],
+      "params": {}
+    },
+    "volume_fill": {
+      "style": "flat",
+      "description": "Earth pops in, the view zooms out as Jupiter rises at its true size ratio, then Earths are thrown in while Jupiter fills up and a counter runs to the final number.",
+      "min_seconds": 9,
+      "max_seconds": 12,
+      "requires_facts": [],
+      "params": {
+        "radius_ratio_fact": {
+          "type": "fact",
+          "required": true,
+          "description": "Jupiter's radius divided by Earth's, used to draw both at their true size ratio"
+        },
+        "count_fact": {
+          "type": "display_fact",
+          "required": true,
+          "description": "The number the counter runs up to, e.g. how many Earths fit inside by volume"
+        }
+      }
+    },
+    "orbit_clock": {
+      "style": "line",
+      "description": "Planets drawn as dots on circular orbits at their real relative distances, moving at their real relative speeds through one Earth year, each counting its laps.",
+      "min_seconds": 9,
+      "max_seconds": 14,
+      "requires_facts": ["earth_period_days"],
+      "params": {
+        "planets": {
+          "type": "list",
+          "required": true,
+          "allowed": ["mercury", "venus", "earth", "mars"],
+          "requires_facts": ["{item}_distance_mkm", "{item}_period_days"],
+          "description": "Which planets to show"
+        },
+        "highlight": {
+          "type": "choice",
+          "required": true,
+          "allowed": ["mercury", "venus", "earth", "mars"],
+          "one_of_param": "planets",
+          "description": "The planet drawn in the accent colour, with a click on each lap. Must be one of the planets shown."
+        },
+        "footnote": {
+          "type": "text",
+          "required": true,
+          "description": "Small print at the bottom: what is simplified, and the source"
+        }
+      }
+    }
+  }
+}

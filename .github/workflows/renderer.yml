@@ -1,0 +1,54 @@
+name: Renderer
+
+on:
+  push:
+    paths:
+      - "renderer/**"
+      - ".github/workflows/renderer.yml"
+  pull_request:
+    paths:
+      - "renderer/**"
+      - ".github/workflows/renderer.yml"
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: renderer
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: renderer/package-lock.json
+
+      - name: Install
+        run: npm ci
+
+      - name: Type check
+        run: npm run typecheck
+
+      - name: Download the browser Remotion renders with
+        run: npx remotion browser ensure
+
+      # One frame from each example. If a scene, style or storyboard is broken, this fails.
+      - name: Render one frame of each example
+        run: |
+          mkdir -p out
+          npx remotion still src/index.ts ExampleCinematic out/cinematic.png --frame=150 --gl=swangle
+          npx remotion still src/index.ts ExampleFlat out/flat.png --frame=200 --gl=swangle
+          npx remotion still src/index.ts ExampleLine out/line.png --frame=200 --gl=swangle
+
+      - name: Check the validator refuses a bad storyboard
+        run: tests/check_validator.sh --gl=swangle
+
+      - name: Keep the frames for review
+        uses: actions/upload-artifact@v4
+        with:
+          name: example-frames
+          path: renderer/out/*.png
