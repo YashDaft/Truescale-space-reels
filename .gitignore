@@ -20,3 +20,6 @@ __pycache__/
 .idea/
 .DS_Store
 Thumbs.db
+
+# API answers cached by the MCP servers
+.cache/

@@ -71,3 +71,25 @@ Each entry: what was decided, what else was considered, and why.
 **Considered:** Allowing constants such as `* 100` or `/ 1000` for unit changes.
 
 **Why:** A constant is a typed number. Percentages and "million" are handled by the display formats instead. If a real conversion is needed later, it can be added as a fact with its own source. Working formulas out again on load catches a value changed by hand after it was calculated.
+
+## 11. The first data source is JPL, through its API
+
+**Decided:** The first MCP server wraps JPL's Solar System Dynamics API (asteroids and comets). NASA's planetary fact sheets wait.
+
+**Considered:** Starting with NASA's planetary fact sheets.
+
+**Why:** The fact sheets are web pages with no data API, so a server would have to read numbers out of HTML tables, which breaks quietly if the page layout changes. JPL's API returns JSON with a version number, so a format change can be detected. Its close-approach data also covers asteroid flybys, one of the planned reel formats. The few planet values the example reels use change very rarely and stay hand-checked for now.
+
+## 12. Tools return ready-made source facts
+
+**Decided:** Each tool returns facts with a key, value, unit, source link and level, plus JPL's uncertainty and reference where it gives them. Values are copied from JPL's answer by code, at full precision.
+
+**Why:** The pipeline can pass a fact straight to the fact sheet builder, so no model ever retypes a number between the source and the sheet. The uncertainty and reference are kept so the verify step and the reel's caption can use them later.
+
+## 13. A file cache in front of each API
+
+**Decided:** Every answer is saved as a JSON file with its URL and fetch time, and reused until it's too old (7 days for small-body data, 1 day for close approaches). Error-only answers aren't saved. If JPL's API reaches a new major version, the server refuses to read it.
+
+**Considered:** Storing answers in Postgres now.
+
+**Why:** Files need no setup and are easy to read while building. The saved record already holds what a fact's history needs (where, what and when), so moving it to Postgres later is a storage change, not a design change. Refusing a new major version is safer than reading a changed format wrongly.

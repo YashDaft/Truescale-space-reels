@@ -1,0 +1,270 @@
+{
+  "signature": {
+    "version": "1.3",
+    "source": "NASA/JPL Small-Body Database (SBDB) API"
+  },
+  "orbit": {
+    "epoch": "2461200.5",
+    "not_valid_after": null,
+    "n_obs_used": 9130,
+    "elements": [
+      {
+        "value": ".2228779627700761",
+        "sigma": "9.3902E-9",
+        "name": "e",
+        "units": null,
+        "title": "eccentricity",
+        "label": "e"
+      },
+      {
+        "label": "a",
+        "units": "au",
+        "name": "a",
+        "title": "semi-major axis",
+        "sigma": "1.5185E-10",
+        "value": "1.458243716760167"
+      },
+      {
+        "value": "1.133233327946397",
+        "sigma": "1.3695E-8",
+        "title": "perihelion distance",
+        "units": "au",
+        "name": "q",
+        "label": "q"
+      },
+      {
+        "name": "i",
+        "units": "deg",
+        "title": "inclination; angle with respect to x-y ecliptic plane",
+        "label": "i",
+        "value": "10.82854410314273",
+        "sigma": "1.158E-6"
+      },
+      {
+        "sigma": "3.5792E-6",
+        "value": "304.2679713350896",
+        "label": "node",
+        "name": "om",
+        "units": "deg",
+        "title": "longitude of the ascending node"
+      },
+      {
+        "label": "peri",
+        "name": "w",
+        "units": "deg",
+        "title": "argument of perihelion",
+        "sigma": "3.9825E-6",
+        "value": "178.9181319135911"
+      },
+      {
+        "units": "deg",
+        "name": "ma",
+        "title": "mean anomaly",
+        "label": "M",
+        "value": "62.51145501986792",
+        "sigma": "1.4849E-6"
+      },
+      {
+        "title": "time of perihelion passage",
+        "name": "tp",
+        "units": "TDB",
+        "label": "tp",
+        "value": "2461088.813494039683",
+        "sigma": "2.647E-6"
+      },
+      {
+        "label": "period",
+        "units": "d",
+        "name": "per",
+        "title": "sidereal orbital period",
+        "sigma": "1.0047E-7",
+        "value": "643.1963890927677"
+      },
+      {
+        "sigma": "8.7425E-11",
+        "value": ".5597046347038453",
+        "label": "n",
+        "title": "mean motion",
+        "units": "deg/d",
+        "name": "n"
+      },
+      {
+        "title": "aphelion distance",
+        "units": "au",
+        "name": "ad",
+        "label": "Q",
+        "value": "1.783254105573937",
+        "sigma": "1.8569E-10"
+      }
+    ],
+    "model_pars": [],
+    "n_dop_obs_used": 2,
+    "rms": ".29796",
+    "n_del_obs_used": 4,
+    "orbit_id": "659",
+    "equinox": "J2000",
+    "data_arc": "46582",
+    "moid": ".148798",
+    "first_obs": "1893-10-29",
+    "not_valid_before": null,
+    "sb_used": "SB441-N16",
+    "producer": "Giorgini",
+    "comment": null,
+    "soln_date": "2021-05-24 17:55:05",
+    "last_obs": "2021-05-13",
+    "moid_jup": "3.2952",
+    "pe_used": "DE441",
+    "two_body": null,
+    "t_jup": "4.582",
+    "condition_code": "0",
+    "source": "JPL",
+    "cov_epoch": "2453311.5"
+  },
+  "phys_par": [
+    {
+      "name": "H",
+      "units": null,
+      "desc": "absolute magnitude (magnitude at 1 au from Sun and observer)",
+      "value": "10.40",
+      "title": "absolute magnitude",
+      "notes": null,
+      "ref": "E2026L10",
+      "sigma": null
+    },
+    {
+      "value": "0.46",
+      "units": null,
+      "name": "G",
+      "desc": "magnitude slope parameter used in the standard asteroid H/G magnitude law",
+      "ref": "PDS3 (MPC 17258)",
+      "sigma": null,
+      "title": "magnitude slope",
+      "notes": "Fit"
+    },
+    {
+      "sigma": "0.06",
+      "ref": "Yeomans et al. (2000) Science v.289,pp.2085-2088",
+      "notes": "sphere having the measured volume of 2503 +/- 25 km^3",
+      "title": "diameter",
+      "value": "16.84",
+      "desc": "effective body diameter",
+      "name": "diameter",
+      "units": "km"
+    },
+    {
+      "value": "34.4x11.2x11.2",
+      "name": "extent",
+      "units": "km",
+      "desc": "tri(or bi)-axial body dimensions",
+      "ref": "Veverka et al. (2000) Science v.289,pp.2088-2097",
+      "sigma": null,
+      "title": "extent",
+      "notes": null
+    },
+    {
+      "sigma": "0.001e-04",
+      "ref": "Yeomans et al. (2000) Science v.289,pp.2085-2088",
+      "notes": null,
+      "title": "GM",
+      "value": "4.463e-04",
+      "desc": "standard gravitational parameter: product of the mass (M) and gravitational constant (G)",
+      "name": "GM",
+      "units": "km^3/s^2"
+    },
+    {
+      "title": "bulk density",
+      "notes": "based on a volume of 2503 +/- 25 km^3. Porosity 10-30%.",
+      "ref": "Yeomans et al. (2000) Science v.289,pp.2085-2088",
+      "sigma": "0.03",
+      "name": "density",
+      "units": "g/cm^3",
+      "desc": "bulk density",
+      "value": "2.67"
+    },
+    {
+      "ref": "LCDB (Rev. 2023-October); Warner et al., 2009",
+      "sigma": null,
+      "title": "rotation period",
+      "notes": "REFERENCE LIST: shortened in this test copy",
+      "value": "5.27",
+      "name": "rot_per",
+      "units": "h",
+      "desc": "body rotation period (synodic)"
+    },
+    {
+      "notes": null,
+      "title": "pole direction",
+      "sigma": "0.05",
+      "ref": "Yeomans et al. (2000) Science v.289,pp.2085-2088",
+      "desc": "spin-pole direction in R.A./Dec.",
+      "units": null,
+      "name": "pole",
+      "value": "11.37/17.22"
+    },
+    {
+      "sigma": "0.06",
+      "ref": "Veverka et al. (2000) Science v.289,pp.2088-2097",
+      "notes": "average",
+      "title": "geometric albedo",
+      "value": "0.25",
+      "desc": "geometric albedo",
+      "units": null,
+      "name": "albedo"
+    },
+    {
+      "value": "0.921",
+      "units": null,
+      "name": "BV",
+      "desc": "color index B-V magnitude difference",
+      "ref": "EAR-A-5-DDR-UBV-MEAN-VALUES-V1.2",
+      "sigma": "0.021",
+      "title": "B-V",
+      "notes": "#obs=48; phase (min.=8.73, mean=34.88, max.=57.19) deg."
+    },
+    {
+      "name": "UB",
+      "units": null,
+      "desc": "color index U-B magnitude difference",
+      "value": "0.531",
+      "title": "U-B",
+      "notes": "#obs=45; phase (min.=7.37, mean=34.55, max.=57.19) deg.",
+      "ref": "EAR-A-5-DDR-UBV-MEAN-VALUES-V1.2",
+      "sigma": "0.027"
+    },
+    {
+      "value": "S",
+      "desc": "Tholen spectral taxonomic classification",
+      "units": null,
+      "name": "spec_T",
+      "sigma": null,
+      "ref": "EAR-A-5-DDR-TAXONOMY-V4.0",
+      "notes": "used 7 color indices; used ground-based radiometric albedo",
+      "title": "Tholen spectral type"
+    },
+    {
+      "desc": "SMASSII spectral taxonomic classification",
+      "name": "spec_B",
+      "units": null,
+      "value": "S",
+      "notes": "based on a high-resolution spectrum by Xu et al. (1995) or Bus and Binzel (2002)",
+      "title": "SMASSII spectral type",
+      "sigma": null,
+      "ref": "EAR-A-5-DDR-TAXONOMY-V4.0"
+    }
+  ],
+  "object": {
+    "kind": "an",
+    "spkid": "20000433",
+    "des": "433",
+    "pha": false,
+    "fullname": "433 Eros (A898 PA)",
+    "prefix": null,
+    "orbit_class": {
+      "code": "AMO",
+      "name": "Amor"
+    },
+    "orbit_id": "659",
+    "shortname": "433 Eros",
+    "neo": true
+  }
+}

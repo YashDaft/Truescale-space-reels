@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - "factsheet/**"
+      - "mcp_servers/**"
       - "tests/**"
       - "renderer/examples/**"
       - "pyproject.toml"
@@ -13,6 +14,7 @@ on:
   pull_request:
     paths:
       - "factsheet/**"
+      - "mcp_servers/**"
       - "tests/**"
       - "renderer/examples/**"
       - "pyproject.toml"
